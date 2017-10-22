@@ -15,7 +15,7 @@ const PATHS = {
 // creates new HTML file using the given template and adds script tags to include out index_bundle.js
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 	template: PATHS.client + '/index.html'
-})
+});
 
 const base = {
 	entry: PATHS.client,
@@ -26,7 +26,6 @@ const base = {
 	module: {
 		loaders:[
 			{ test: /\.(js)$/, use: 'babel-loader' },
-			{ test: /\.(scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
 			{ test: /\.(css)$/, use: ['style-loader', 'css-loader'] }
 		]
 	}
@@ -50,5 +49,5 @@ const productionConfig = {
 }
 
 
-module.exports = Object.assign({}, base, isProduction === true ? productionConfig : developmentConfig)
+module.exports = Object.assign({}, base, isProduction === true ? productionConfig : developmentConfig);
 

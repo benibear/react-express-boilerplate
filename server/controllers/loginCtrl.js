@@ -5,7 +5,6 @@ const
 
 // use fb id to find/create user and return encrypted user id 
 async function authorizeUser (user) {
-
     try {
 
         let userId = await userModel.verifyAccount(user.fbId);

@@ -1,9 +1,13 @@
 import React from 'react';
+import Login from '../components/Login';
+
 
 function HomeContainer () {
 	return(
-		<div>HOME</div>
-	)
+		<div>
+			<Login />
+		</div>
+	);
 }
 
 export default HomeContainer;
