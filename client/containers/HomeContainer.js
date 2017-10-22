@@ -3,11 +3,11 @@ import Login from '../components/Login';
 
 
 function HomeContainer () {
-	return(
-		<div>
-			<Login />
-		</div>
-	);
+    return(
+        <div>
+            <Login />
+        </div>
+    );
 }
 
 export default HomeContainer;

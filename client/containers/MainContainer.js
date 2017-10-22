@@ -4,14 +4,14 @@ import HomeContainer from './HomeContainer';
 
 
 function MainContainer () {
-	return (
+    return (
         <div>
             <h1>Your App</h1>
             <BrowserRouter>
                 <Route exact path="/" component={HomeContainer} />
-    		</BrowserRouter>
+            </BrowserRouter>
         </div>
-	);
+    );
 }
 
 export default MainContainer;
