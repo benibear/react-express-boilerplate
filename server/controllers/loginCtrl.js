@@ -15,8 +15,8 @@ async function authorizeUser (user) {
         let token = tokenize.createToken(userId);
         return token;
 
-    } catch (err) {
-        console.log("login error", err);
+    } catch (e) {
+        throw e;
     }
 }
     
