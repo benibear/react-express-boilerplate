@@ -1,17 +1,31 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import HomeContainer from './HomeContainer';
+import LoginContainer from './LoginContainer';
+import Navigation from '../components/Navigation';
 
 
-function MainContainer () {
-    return (
-        <div>
-            <h1>Your App</h1>
-            <BrowserRouter>
-                <Route exact path="/" component={HomeContainer} />
-            </BrowserRouter>
-        </div>
-    );
+class MainContainer extends Component {
+    render() {
+        return (
+            <div>
+                <h1>Your App</h1>
+                <Navigation isAuthed={this.props.isAuthed} user={this.props.user}/>
+                <BrowserRouter>
+                    <Route exact path="/" component={LoginContainer} />
+                </BrowserRouter>
+            </div>
+        );  
+    }
 }
 
-export default MainContainer;
+function mapStateToProps (state) {
+    return {
+        isAuthed: state.isAuthed,
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(MainContainer);

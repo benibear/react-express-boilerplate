@@ -1,16 +1,12 @@
 import React from 'react';
 
-// placeholder for login component
-class Login extends React.Component {
-    constructor() {
-        super();
-    }
 
-    render() {
-       return(
-            <h2>Login</h2>
-        )
-    }
+function Login () {
+    return (
+        <div className="login-container">
+            <a className="login-link" href="/login/facebook">Login with Facebook</a>
+        </div>
+    )
 }
 
 export default Login;
